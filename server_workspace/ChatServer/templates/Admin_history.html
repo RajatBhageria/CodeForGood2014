@@ -72,9 +72,9 @@
               <table>
               		{% for message in messages %}
               			{% if message.user_from_id == mentor_id %}
-              				<tr><td>Mentor: </td><td>{{ message.text }}</td></tr>
-              			{% elseif message.user_from_id == mentee_id %}
-              				<tr><td>Mentee: </td><td>{{ message.text }}</td></tr>
+              				<tr><td>{{ mentor_name }} </td><td>{{ message.text }}</td></tr>
+              			{% elif message.user_from_id == mentee_id %}
+              				<tr><td>{{ mentee_name }}</td><td>{{ message.text }}</td></tr>
               			{% endif %}
               		{% endfor %}
               </table>

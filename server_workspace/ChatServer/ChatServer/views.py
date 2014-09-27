@@ -58,12 +58,20 @@ def login_request(request):
         pass
 
 def view_history(request):
+    print "in view history"
     pair_id = long(request.GET.get('pair_id'))
-    pair = models.Pair.objects.get(pair_id)
+    print "here"
+    pair = models.Pair.objects.get(id=pair_id)
     messages = models.Message.objects.filter(pair_id=pair_id)
+    mentor = models.User.objects.get(id=pair.mentor_id)
+    mentee = models.User.objects.get(id=pair.mentee_id)
+    print"below"
+    print len(messages)
     return render(request, 'Admin_history.html', {"messages": messages,
                                                   "mentor_id": pair.mentor_id,
-                                                  "mentee_id": pair.mentee_id})
+                                                  "mentee_id": pair.mentee_id,
+                                                  "mentor_name": mentor.first_name,
+                                                  "mentee_name": mentee.first_name})
 
 def route_message(request):
     phone_number_incoming = request.GET.get('From')
@@ -109,5 +117,10 @@ def initialize_data(request):
     # Create pairing
     pair = models.Pair(mentor=matt, mentee=moses, admin=bryan)
     pair.save()
+    # Add messages
+    message = models.Message(user_from=moses, user_to=matt, pair=pair,text="Hello Mentor")
+    message.save()
+    message = models.Message(user_from=matt, user_to=moses, pair=pair,text="Hello Mentee")
+    message.save() 
 
 

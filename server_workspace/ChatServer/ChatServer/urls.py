@@ -13,11 +13,9 @@ urlpatterns = patterns('',
 
     url(r'^test/$', views.test_page),
     url(r'^message/$', views.route_message),
-    url(r'^initializeData/$', views.initialize_data),
-    url(r'^adminHistory/$', views.admin_history),
     url(r'^adminHomePage/$', views.admin_home_page),
     url(r'^adminMentorMentee/$',views.admin_mentor_mentee),
-    url(r'^viewPairHistory/$',views.view_history),
+    url(r'^adminHistory/$',views.view_history, name='admin_history'),
     #url(r'^message/$', 'django_twilio.views.message', {
      #   'message': 'Thanks for the SMS. Talk to you soon!',
     #}),
