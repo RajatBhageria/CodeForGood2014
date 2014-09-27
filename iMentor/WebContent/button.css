@@ -1,5 +1,5 @@
 .myButton{
-    background:url(./image/back-arrow.png) no-repeat;
+    background:url(https://github.com/RajatBhageria/CodeForGood2014/blob/master/image/back-arrow.png) no-repeat;
     cursor:pointer;
     border:none;
     width:10%;
@@ -8,5 +8,5 @@
 
 .myButton:active  /* use Dot here */
 {   
-    background:url(./image/back-arrow.png) no-repeat;
+    background:url(https://github.com/RajatBhageria/CodeForGood2014/blob/master/image/back-arrow.png) no-repeat;
 }
