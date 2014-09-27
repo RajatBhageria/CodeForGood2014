@@ -15,6 +15,10 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,11 +26,55 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   <style id="holderjs-style" type="text/css"></style><style type="text/css"></style></head>
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+        <ul id="gn-menu" class="gn-menu-main">
+          <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <nav class="gn-menu-wrapper">
+              <div class="gn-scroller">
+                <ul class="gn-menu">
+                  <li class="gn-search-item">
+                    <input placeholder="Search" type="search" class="gn-search">
+                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                  </li>
+                  <li>
+                    <a class="gn-icon gn-icon-download">History</a>
+                  </li>
+                  <li><a class="gn-icon gn-icon-cog">Badge</a></li>
+                  <li>
+                    <a class="gn-icon gn-icon-archive">Analytics</a>
+                    
+                  <li><a class="gn-icon gn-icon-article">Send Message</a></li>
+                    
+                  </li>
+                </ul>
+              </div><!-- /gn-scroller -->
+            </nav>
+          </li>
+           <div class="search">
+            <li>
+            </li>
+           </div>
+          
+        </ul>
+        
+      </div><!-- /container -->
+      <script src="js/classie.js"></script>
+      <script src="js/gnmenu.js"></script>
+      <script>
+        new gnMenu( document.getElementById( 'gn-menu' ) );
+      </script>
+
+
+
+
+
+    <!--  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -39,7 +87,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="#">Dashboard</a></li> -->
+            <li><a href="#">Dashboard</a></li>
           </ul>
           <div class="navbar-form navbar-right">
           </div>
@@ -48,19 +96,10 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="http://getbootstrap.com/examples/dashboard/#">Overview</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Badges</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Private Feedback</a></li>
-          </ul>
-        </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 

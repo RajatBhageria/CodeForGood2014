@@ -11,7 +11,7 @@
 }
 
 body {
-	background: #34495e;
+	background: #F8F8F8;
 }
 
 .search {
@@ -29,7 +29,7 @@ body {
 .container > header {
 	margin: 0 auto;
 	padding: 12em 2em;
-	padding-left: 370px;
+	padding-left: 100px;
 	background: rgba(0,0,0,0.05);
 }
 
@@ -136,13 +136,13 @@ body {
 @media screen and (max-width: 1025px) {
 	.container > header {
 		margin: 0 auto;
-		padding: 120px 50px;
+		padding: 80px 50px;
 		font-size: 70%;
 		text-align: right;
 	}
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 500px) {
 
 	.codrops-icon span {
 		display: none;
