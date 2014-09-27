@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="../static/shift.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    
+  </head>
+
+  <body>
+  
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Dashboard</h1>
+        <p>Remember, you are leading 200 students...inspire them!</p>
+      </div>
+    </div> 
+
+    
+      <div class="container">
+        <center><h2 class="sub-header">Mentor/Mentee Pairs</h2></center>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Mentee</th>
+                  <th>Mentor</th>
+                  <th>Frequency</th>
+                  <th>Profile Page</th>
+                </tr>
+              </thead>
+              <tbody>
+              	{% for pair in pairs %}
+              		<tr>
+              			<td>{{ pair.id }} </td>
+              			<td>{{ pair.mentor_name }}</td>
+              			<td>{{ pair.mentee_name }}</td>
+              			<td>{{ pair.freq }}</td>
+              		</tr>
+              	{% endfor %}         
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  </body>
+</html>
+         
+
+    

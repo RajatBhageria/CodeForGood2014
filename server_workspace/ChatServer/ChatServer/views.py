@@ -59,6 +59,11 @@ def login_request(request):
 
 def view_history(request):
     pair_id = long(request.GET.get('pair_id'))
+    pair = models.Pair.objects.get(pair_id)
+    messages = models.Message.objects.filter(pair_id=pair_id)
+    return render(request, 'Admin_history.html', {"messages": messages,
+                                                  "mentor_id": pair.mentor_id,
+                                                  "mentee_id": pair.mentee_id})
 
 def route_message(request):
     phone_number_incoming = request.GET.get('From')

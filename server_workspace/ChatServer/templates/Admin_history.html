@@ -69,9 +69,17 @@
     </li>
 </ul>
             <div class ="textBox">
-            History of texts should appear here   
+              <table>
+              		{% for message in messages %}
+              			{% if message.user_from_id == mentor_id %}
+              				<tr><td>Mentor: </td><td>{{ message.text }}</td></tr>
+              			{% elseif message.user_from_id == mentee_id %}
+              				<tr><td>Mentee: </td><td>{{ message.text }}</td></tr>
+              			{% endif %}
+              		{% endfor %}
+              </table>
 
-      </div>
+      		</div>
   
       </header> 
     </div><!-- /container -->
