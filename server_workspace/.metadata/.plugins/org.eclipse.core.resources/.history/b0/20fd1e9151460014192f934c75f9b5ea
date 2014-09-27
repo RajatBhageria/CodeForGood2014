@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Mentor View</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/mentor.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul id="gn-menu" class="gn-menu-main">
+       
+         <div>
+                <img src="image/IMentor_logo.png" width="100" height="50" align="middle">
+              </div>
+        
+      </ul>
+      <header>
+        <h1>iMentor Web Application History <span> <a href="http://www.imentor.org/mission-and-work">iMEntor website</a> page</span></h1>
+        <br></br>
+
+        <ul id="nav">
+
+    <li>
+      <div class = flag>
+        <img src="image/flag.png" alt="50x50";> <a href="#";>Flags </a> 
+    </div>
+        <ul>
+            <li><a href="#">1: Social Capital Skills</a></li>
+            <li><a href="#">2: Utilizing a Growth Mindset</a></li>
+            <li><a href="#">3: Perseverance</a></li>
+            <li><a href="#">4: Critical Thinking Skills</a></li>
+            <li><a href="#">5: Help Seeking and Self-Advocacy</a></li>
+            <li><a href="#">6: Optimism and Excitement About the Future</a></li>
+            <li><a href="#">7:  Curiosity and a Love of Learning</a></li>
+
+        </ul>
+    </li>
+</ul>
+            <div class ="textBox">
+            History of texts should appear here   
+
+      </div>
+  
+      </header> 
+    </div><!-- /container -->
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script>
+      new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>
+  </body>
+</html>

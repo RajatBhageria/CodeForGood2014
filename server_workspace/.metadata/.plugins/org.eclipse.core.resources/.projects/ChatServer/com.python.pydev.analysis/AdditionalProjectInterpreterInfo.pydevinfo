@@ -2,11 +2,11 @@
 -- START DISKCACHE
 C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\ChatServer\com.python.pydev.analysis\v2_indexcache
 ChatServer.__init__|1411783058531|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\__init__.py
-ChatServer.settings|1411823180183|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\settings.py
+ChatServer.settings|1411828814616|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\settings.py
 ChatServer.wsgi|1411783058531|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\wsgi.py
 manage|1411783058496|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\manage.py
 ChatServer.models|1411826536264|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\models.py
-ChatServer.urls|1411823595582|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\urls.py
+ChatServer.urls|1411827768454|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\urls.py
 -- END DISKCACHE
 -- START DICTIONARY
 8
@@ -20,7 +20,7 @@ ChatServer.urls|1411823595582|C:\Users\Matthew\Development\Python\repos\CodeForG
 7=Badge
 -- END DICTIONARY
 -- START TREE 1
-30
+31
 acc|0|
 adm|0|
 all|1|ALLOWED_HOSTS!11@
@@ -36,6 +36,7 @@ ini|0|
 ins|1|INSTALLED_APPS!11@
 lan|1|LANGUAGE_CODE!11@
 log|0|
+men|0|
 mes|1|Message!25@
 mid|1|MIDDLEWARE_CLASSES!11@
 pai|1|Pair!25@

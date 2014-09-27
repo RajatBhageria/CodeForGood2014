@@ -42,13 +42,26 @@ def admin_mentor_mentee(request):
     return render(request, 'Admin_mentor_mentee.html')
 def login_page(request):
     return render(request, 'login.html')
+def mentor_view(request):
+    print "getting page"
+    return render(request, "Mentor_View.html")
 
 def login_request(request):
-    email = request.POST.get('email')
+    print "entering login request"
+    email = request.GET.get('email')
+    user = models.User.objects.filter(email=email)
+    print user
     print email
-    password = request.POST.get('password')
-    print password
-    return render_to_response("Invalid")
+    if len(user) == 0:
+        return HttpResponse("Invalid username or password")
+    user = user[0]
+    if user.type == 2: #Admin
+        return admin_home_page(request)
+    if user.type == 1: #Mentor
+        return mentor_view(request)
+    if user.type == 0: # Mentee
+        return mentor_view(request)
+    return HttpResponse("invalid")
 
 def view_pair_profile(request):
     pair_id = long(request.GET.get("pair_id"))

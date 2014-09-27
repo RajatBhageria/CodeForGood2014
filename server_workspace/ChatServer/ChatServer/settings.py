@@ -59,7 +59,6 @@ TWILIO_AUTH_TOKEN = '7a474c787f36db39c3c08edce40598a2'
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -72,6 +71,7 @@ WSGI_APPLICATION = 'ChatServer.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+#    'django.middleware.csrf.CsrfViewMiddleware',
 
 DATABASES = {
     'default': {

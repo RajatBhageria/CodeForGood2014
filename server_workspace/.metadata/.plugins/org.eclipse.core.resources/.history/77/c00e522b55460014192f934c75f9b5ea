@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="../static/css/shift.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    
+  </head>
+
+  <body>
+  
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Learn from the very best</h1>
+        <p>Get mentorship from the country's brightest, on your time.</p>
+      </div>
+    </div> 
+
+    <div class="learn-more">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+      <h3>Your time</h3>
+      <p>Our mentors meet with mentees whenever they are free.</p>
+      </div>
+      <div class="col-md-4">
+      <h3>Your future</h3>
+      <p>Our mentors are all college educated and successful individuals in NYC.</p>
+        </div>
+      <div class="col-md-4">
+      <h3>Your Investement</h3>
+      <p>We believe that even the minority should receive indivdualized education.</p>
+      </div>
+      </div>
+      <div class="container">
+      <p></p>
+            <p></p>
+      <center><img src="../static/image/iMentor_logo.png" align="middle" width="150" height="100"></center>
+      <form class="form-signin" method="GET" action="{% url 'login_request' %}">
+        <h3 class="container" align="center">Please sign in</h3>
+        <input type="text" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
+        <input type="password" class="form-control" placeholder="Password" required="">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <input value="Submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    </div>
+  </div>
+  </body>
+</html>
