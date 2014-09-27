@@ -16,7 +16,7 @@ class User(models.Model):
 class Pair(models.Model):
     mentor = models.OneToOneField(User, primary_key=User)
     mentee = models.OneToOneField(User, primary_key=User)
-    admin = models.ForeignKey(User)
+    admin = models.OneToOneField(User, primary_key=User)
     streak = models.IntegerField()
     word_count = models.IntegerField()
     
