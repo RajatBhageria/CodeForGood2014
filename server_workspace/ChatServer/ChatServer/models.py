@@ -11,7 +11,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=30)
     email = models.EmailField(max_length=200)
     phone_number = models.CharField(max_length=15)
-    password = models.CharField(max_length=50)
+    #password = models.CharField(max_length=50)
     type = models.IntegerField() # 0 for mentee 1 for mentor 2 for admin
     
 class Pair(models.Model):
@@ -27,7 +27,11 @@ class Message(models.Model):
     user_to = models.ForeignKey(User)
     text = models.TextField()
     time = models.DateTimeField(default=datetime.now())
-    
+   
+   
+
+
+ 
 class Badge(models.Model):
     name = models.CharField(max_length=50)
     num_awarded = models.IntegerField()
