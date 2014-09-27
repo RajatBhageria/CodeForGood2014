@@ -2,11 +2,11 @@
     background:url(./image/back-arrow.png) no-repeat;
     cursor:pointer;
     border:none;
-    width:100px;
-    height:100px;
+    width:10%;
+    height:10%;
 }
 
-.myButton: active  /* use Dot here */
+.myButton:active  /* use Dot here */
 {   
     background:url(./image/back-arrow.png) no-repeat;
 }
