@@ -10,6 +10,23 @@
   display: inline;
 }
 
+.neighborhood-guides{
+  background-color: #efefef;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.neighborhood-guides h2{
+    color: #393c3d;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.neighborhood-guides p{
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+
 .jumbotron {
   background-image:url('http://goo.gl/04j7Nn');
   height: 500px;
