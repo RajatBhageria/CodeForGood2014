@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    
+  </head>
+
+  <body>
+  
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Analytics</h1>
+        <p>Pair 2</p>
+      </div>
+    </div> 
+
+    
+      <div class="container">
+        <center><h2 class="sub-header">Data</h2></center>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Pair #</th>
+                  <th>Mentee</th>
+                  <th>Mentor</th>
+                  <th>Frequency</th>
+                  <th>Streak</th>
+                  <th>Number of Badges Won</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Bill</td>
+                    <td>Mender</td> 
+                    <td>50</td>
+                    <th>4</th>
+                  	<th>3</th>
+                </tr>            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  </body>
+</html>
+         
+
+    
+				<!--
+   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['Week 1',  1000,      400],
+          ['Week 2',  1170,      460],
+          ['Week 3',  660,       1120],
+          ['Week 4',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          'width':400,
+          'height':300
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+      }
+   		 </script>
+  -->
+  	
