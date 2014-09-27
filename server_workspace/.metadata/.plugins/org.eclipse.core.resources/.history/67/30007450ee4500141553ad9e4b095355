@@ -1,0 +1,24 @@
+'''
+Created on Sep 26, 2014
+
+@author: Matthew
+'''
+from django.views.generic import TemplateView
+
+from django.http import HttpResponseRedirect
+from django.http import HttpResponse
+from django.shortcuts import render
+
+from django.http import HttpResponse
+import datetime
+import urllib
+from forms import DesignForm
+from django.forms.formsets import formset_factory
+import single
+import data_manager
+import models_store
+import datastore_backend
+import forms
+
+def test_page(request):
+    return render(request, 'test.html')
