@@ -2,11 +2,11 @@
 -- START DISKCACHE
 C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\ChatServer\com.python.pydev.analysis\v2_indexcache
 ChatServer.__init__|1411783058531|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\__init__.py
-ChatServer.settings|1411795987466|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\settings.py
+ChatServer.settings|1411806757703|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\settings.py
 ChatServer.wsgi|1411783058531|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\wsgi.py
 manage|1411783058496|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\manage.py
-ChatServer.models|1411798942214|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\models.py
-ChatServer.urls|1411799021125|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\urls.py
+ChatServer.models|1411808031760|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\models.py
+ChatServer.urls|1411804029122|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\urls.py
 -- END DISKCACHE
 -- START DICTIONARY
 8
@@ -20,8 +20,9 @@ ChatServer.urls|1411799021125|C:\Users\Matthew\Development\Python\repos\CodeForG
 7=Badge
 -- END DICTIONARY
 -- START TREE 1
-27
+30
 acc|0|
+adm|0|
 all|1|ALLOWED_HOSTS!11@
 app|1|application!19@
 aut|0|
@@ -34,23 +35,25 @@ gen|0|
 ini|0|
 ins|1|INSTALLED_APPS!11@
 lan|1|LANGUAGE_CODE!11@
+log|0|
 mes|1|Message!25@
 mid|1|MIDDLEWARE_CLASSES!11@
 pai|1|Pair!25@
 roo|1|ROOT_URLCONF!11@
 rou|0|
 sec|1|SECRET_KEY!11@
-sta|1|STATIC_URL!11@
+sta|2|STATIC_URL!11@STATICFILES_DIRS!11@
 tem|2|TEMPLATE_DIRS!11@TEMPLATE_DEBUG!11@
 tes|0|
 tim|1|TIME_ZONE!11@
 twi|2|TWILIO_ACCOUNT_SID!11@TWILIO_AUTH_TOKEN!11@
 url|1|urlpatterns!35@
 use|4|User!25@USE_I18N!11@USE_L10N!11@USE_TZ!11@
+vie|0|
 wsg|1|WSGI_APPLICATION!11@
 -- END TREE
 -- START TREE 2
-15
+16
 adm|1|admin!5&27@
 ema|1|email!6&27@
 fir|1|first_name!6&27@
@@ -59,6 +62,7 @@ men|2|mentee!5&27@mentor!5&27@
 nam|1|name!7&27@
 num|1|num_awarded!7&27@
 pai|1|pair!8&27@
+pas|1|password!6&27@
 pho|1|phone_number!6&27@
 str|1|streak!5&27@
 tex|1|text!8&27@

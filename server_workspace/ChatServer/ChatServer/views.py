@@ -20,6 +20,46 @@ def test_page(request):
     user.save()
     return render(request, 'test.html')
 
+def admin_home_page(request):
+    pairs = []
+    for pair in models.Pair.objects.all():
+        mentor = models.User.objects.get(id=pair.mentor_id)
+        mentor_name = mentor.first_name + " " + mentor.last_name
+        mentee = models.User.objects.get(id=pair.mentee_id)
+        mentee_name = mentee.first_name + " " + mentor.last_name
+        dict = {"id": pair.id,
+                "mentor_name": mentor_name,
+                "mentee_name": mentee_name,
+                "freq": 0}
+        pairs.append(dict)
+    return render(request, 'Admin_home_page.html', {"pairs": pairs})
+
+def admin_history(request):
+    return render(request, 'Admin_history.html')
+def admin_mentor_mentee(request):
+    return render(request, 'Admin_mentor_mentee.html')
+def login_page(request):
+    return render(request, 'login_page.html')
+
+def login_request(request):
+    email = request.POST.get('email')
+    password = request.POST.get('password')
+    user = models.User.objects.filter(email=email)
+    if not user:
+        return
+    user = user[0]
+    if password != user.password:
+        return
+    if user.type == 2: #Admin
+        return render(request, 'Admin_home_page')
+    if user.type == 1: #Mentor
+        pass
+    if user.type == 0: # Mentee
+        pass
+
+def view_history(request):
+    pair_id = long(request.GET.get('pair_id'))
+
 def route_message(request):
     phone_number_incoming = request.GET.get('From')
     text = request.GET.get('Body')

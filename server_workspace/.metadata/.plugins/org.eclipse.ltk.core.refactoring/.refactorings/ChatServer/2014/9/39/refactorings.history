@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ChatServer/templates/Admin_home_page.html&apos; to &apos;admin_home_page.html&apos;" description="Rename resource &apos;Admin_home_page.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="templates/Admin_home_page.html" name="admin_home_page.html" stamp="1411803939443" updateReferences="true"/>
+</session>

@@ -1,5 +1,6 @@
 MODULES_MANAGER_V2
 ChatServer.__init__|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\__init__.py
+ChatServer.models|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\models.py
 ChatServer.settings|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\settings.py
 ChatServer.urls|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\urls.py
 ChatServer.views|C:\Users\Matthew\Development\Python\repos\CodeForGood2014\server_workspace\ChatServer\ChatServer\views.py

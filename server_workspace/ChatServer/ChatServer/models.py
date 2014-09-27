@@ -11,6 +11,7 @@ class User(models.Model):
     last_name = models.CharField(max_length=30)
     email = models.EmailField(max_length=200)
     phone_number = models.CharField(max_length=15)
+    password = models.CharField(max_length=50)
     type = models.IntegerField() # 0 for mentee 1 for mentor 2 for admin
     
 class Pair(models.Model):

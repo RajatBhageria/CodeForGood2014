@@ -11,9 +11,12 @@ urlpatterns = patterns('',
     # url(r'^$', 'ChatServer.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^test/', views.test_page),
+    url(r'^test/$', views.test_page),
     url(r'^message/$', views.route_message),
     url(r'^initializeData/$', views.initialize_data),
+    url(r'^adminHistory/$', views.admin_history),
+    url(r'^adminHomePage/$', views.admin_home_page),
+    url(r'^adminMentorMentee/$',views.admin_mentor_mentee),
     #url(r'^message/$', 'django_twilio.views.message', {
      #   'message': 'Thanks for the SMS. Talk to you soon!',
     #}),
