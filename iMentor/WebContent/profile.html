@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>IMentor Dashboard</title>
+    <title>Profile Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,50 @@
 
   <body>
 
-  
+  <div class="container">
+        <ul id="gn-menu" class="gn-menu-main">
+          <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <nav class="gn-menu-wrapper">
+              <div class="gn-scroller">
+                <ul class="gn-menu">
+                  <li class="gn-search-item">
+                    <input placeholder="Search" type="search" class="gn-search">
+                    <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                  </li>
+                  <li>
+                    <a class="gn-icon gn-icon-download" href="Admin_home_page.html">Home</a>
+                  </li>
+                  <li>
+                    <a class="gn-icon gn-icon-download" href="Admin_history.html">History</a>
+                  </li>
+                  <li><a class="gn-icon gn-icon-cog" href="badges.html">Badge</a></li>
+                  <li>
+                    <a class="gn-icon gn-icon-archive" href="analytics.html">Analytics</a>
+                    
+                  <li><a class="gn-icon gn-icon-article">Send Message</a></li>
+                    
+                  </li>
+                </ul>
+              </div><!-- /gn-scroller -->
+            </nav>
+          </li>
+           <div>
+                <img src="image/IMentor_logo.png" width="100" height="50" align="middle">
+           </div>
+          
+        </ul>
+        
+      </div><!-- /container -->
+      <script src="js/classie.js"></script>
+      <script src="js/gnmenu.js"></script>
+      <script>
+        new gnMenu( document.getElementById( 'gn-menu' ) );
+      </script>
+
+
+
+
 
     <!--  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -61,45 +104,30 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
 
-         
-          <h2 class="sub-header">Mentor/Mentee Pairs</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Mentee</th>
-                  <th>Mentor</th>
-                  <th>Frequency</th>
-                  <th>Profile Page</th>
-                </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Bill</td>
-                    <td>Mender</td> 
-                    <td>50</td>
-                    <td>Profile</td>
-                </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Mentee</td>
-                    <td>Joe</td> 
-                    <td>60</td>
-                    <td>Profile</td>
-
-                </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Janice</td>
-                    <td>Mentor</td> 
-                    <td>75</td>
-                    <td>Profile</td>
-                </tr>            
-              </tbody>
-            </table>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="Admin_history.html"><img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="200x200" src="image/history-icon.png"></a>
+              <h4>History</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="badges.html"><img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="200x200" src="image/badge-icon.png"></a>
+              <h4>Badges</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <a href="analytics.html"><img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="200x200" src="image/Stat-icon.png"></a>
+              <h4>Analytics</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="300x300" src="image/Feedback-icon.png">
+              <h4>Private Feedback</h4>
+              <span class="text-muted">Something else</span>
+            </div>
           </div>
+
+      
         </div>
       </div>
     </div>
