@@ -14,15 +14,15 @@ class User(models.Model):
     type = models.IntegerField() # 0 for mentee 1 for mentor 2 for admin
     
 class Pair(models.Model):
-    mentor = models.OneToOneField(User, primary_key=User)
-    mentee = models.OneToOneField(User, primary_key=User)
-    admin = models.ForeignKey(User)
-    streak = models.IntegerField()
-    word_count = models.IntegerField()
+    mentor = models.ForeignKey(User, related_name='mentor_pair')
+    mentee = models.ForeignKey(User, related_name='mentee_pair')
+    admin = models.ForeignKey(User, related_name='admin_pair')
+    streak = models.IntegerField(default=0)
+    word_count = models.IntegerField(default=0)
     
 class Message(models.Model):
-    pair = models.ForeignKey(Pair)
-    user_from = models.ForeignKey(User)
+    pair = models.ForeignKey(Pair, related_name='pair')
+    user_from = models.ForeignKey(User, related_name='user_from')
     user_to = models.ForeignKey(User)
     text = models.TextField()
     time = models.DateTimeField(default=datetime.now())

@@ -26,8 +26,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+from os.path import join
+
 TEMPLATE_DIRS = (
-                 BASE_DIR + '/templates/'
+                 join(BASE_DIR, '/templates/'),
 )
 
 # Application definition
@@ -41,6 +43,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 )
+
+TWILIO_ACCOUNT_SID = 'ACa3784f71861749cee6445c4d2f182f27'
+TWILIO_AUTH_TOKEN = '7a474c787f36db39c3c08edce40598a2'
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -64,9 +70,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mentor',
         'USER': 'root',
-        'PASSWORD': 'mag1c',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD': 'code4good',
+        'HOST': '',
+        'PORT': '',
     }
 }
 

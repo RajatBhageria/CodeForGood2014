@@ -1,0 +1,27 @@
+'''
+Created on Sep 26, 2014
+
+@author: Matthew
+'''
+from django.views.generic import TemplateView
+
+from django.http import HttpResponseRedirect
+from django.http import HttpResponse
+from django.shortcuts import render
+
+from django.http import HttpResponse
+
+from django.forms.formsets import formset_factory
+import models
+
+
+def test_page(request):
+    user = models.User(first_name="matt",last_name="maclean")
+    user.save()
+    return render(request, 'test.html')
+
+def route_message(request):
+    phone_number = request.GET.get('From')
+    print phone_number
+    return twiml = '<Response><Message>Hello from your Django app!</Message></Response>'
+

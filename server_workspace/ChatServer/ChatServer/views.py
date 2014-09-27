@@ -19,3 +19,23 @@ def test_page(request):
     user = models.User(first_name="matt",last_name="maclean")
     user.save()
     return render(request, 'test.html')
+
+def route_message(request):
+    phone_number = request.GET.get('From')
+    print "new"
+    print phone_number
+    return HttpResponse('<Response><Message>Hello from your Django app!</Message></Response>')
+
+def initialize_data(request):
+    # Create mentor and mentee
+    moses = models.User(first_name="Moses", last_name="Soh", email="moses.soh@gmail.com", phone_number="+12676487834", type=0)
+    moses.save()
+    matt = models.User(first_name="Matt", last_name="MacLean", email="matthewtmaclean@gmail.com", phone_number="+19086921924", type=1)
+    matt.save()
+    bryan = models.User(first_name="Bryan", last_name="Cam", email="bryanrcam@gmail.com", phone_number="+17862395770", type=2)
+    bryan.save()
+    # Create pairing
+    pair = models.Pair(mentor=matt, mentee=moses, admin=bryan)
+    pair.save()
+
+

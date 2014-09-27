@@ -1,0 +1,29 @@
+from django.conf.urls import patterns, include, url
+
+from django.contrib import admin
+import views
+
+admin.autodiscover()
+
+from twilio.rest import TwilioRestClient 
+ 
+# put your own credentials here 
+ACCOUNT_SID = "ACa3784f71861749cee6445c4d2f182f27" 
+AUTH_TOKEN = "[AuthToken]" 
+ 
+client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN) 
+ 
+client.messages.create( 
+    from_="+17328100314",   
+)
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'ChatServer.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+
+    url(r'^test/', views.test_page),
+    url(r'^message/$', 'django_twilio.views.message', {
+        'message': 'Thanks for the SMS. Talk to you soon!',
+    }),
+)
