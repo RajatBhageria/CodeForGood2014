@@ -24,7 +24,7 @@
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
-                <tr>
+                <tr> <!-- table title -->
                   <th>#</th>
                   <th>Mentee</th>
                   <th>Mentor</th>
@@ -41,7 +41,7 @@
               			<td>{{ pair.freq }}</td>
               			<!--  <td><a href="{% url 'admin_history' %}?pair_id={{ pair.id }}">View</a></td>-->
               			<td><a href="{% url 'admin_pair_profile' %}?pair_id={{ pair.id }}">View</a></td>
-              			
+              			<!-- link to the profile of individual pairs -->
               		</tr>
               	{% endfor %}         
               </tbody>
