@@ -8,7 +8,9 @@ from twilio.rest import TwilioRestClient
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.shortcuts import render_to_response
+import urllib2
+import urllib
 from django.http import HttpResponse
 
 from django.forms.formsets import formset_factory
@@ -39,24 +41,19 @@ def admin_history(request):
 def admin_mentor_mentee(request):
     return render(request, 'Admin_mentor_mentee.html')
 def login_page(request):
-    return render(request, 'login_page.html')
+    return render(request, 'login.html')
 
 def login_request(request):
     email = request.POST.get('email')
+    print email
     password = request.POST.get('password')
-    user = models.User.objects.filter(email=email)
-    if not user:
-        return
-    user = user[0]
-    if password != user.password:
-        return
-    if user.type == 2: #Admin
-        return render(request, 'Admin_home_page')
-    if user.type == 1: #Mentor
-        pass
-    if user.type == 0: # Mentee
-        pass
+    print password
+    return render_to_response("Invalid")
 
+def view_pair_profile(request):
+    pair_id = long(request.GET.get("pair_id"))
+    return render(request, 'profile.html', {'pair_id': pair_id})
+    
 def view_history(request):
     print "in view history"
     pair_id = long(request.GET.get('pair_id'))
@@ -74,31 +71,49 @@ def view_history(request):
                                                   "mentee_name": mentee.first_name})
 
 def route_message(request):
+    print "in route message"
     phone_number_incoming = request.GET.get('From')
     text = request.GET.get('Body')
     print phone_number_incoming
-    user = models.User.objects.get(phone_number=phone_number_incoming)
+    print "about to"
+    user = models.User.objects.filter(phone_number=phone_number_incoming)
+    print len(user)
+    user = user[0]
+    print "a"
     pair_cand_1 = models.Pair.objects.filter(mentor_id=user.id)
+    print "b"
     pair_cand_2 = models.Pair.objects.filter(mentee_id=user.id)
+    print "c"
     if pair_cand_1:
         mentee = models.User.objects.get(id=pair_cand_1[0].mentee_id)
+        print "d"
         phone_number_target = mentee.phone_number
+        user_to = mentee
+        pair = pair_cand_1[0]
     else:
         mentor = models.User.objects.get(id=pair_cand_2[0].mentor_id)
+        user_to=mentor
+        print "e"
         phone_number_target = mentor.phone_number
+        pair = pair_cand_2[0]
     print phone_number_target
-    
+    print user_to.id
+    print user.id
+    print pair.id
+    message = models.Message(user_from=user, user_to=user_to, pair=pair,text=text)
+    message.save()
+
     TWILIO_ACCOUNT_SID = 'ACa3784f71861749cee6445c4d2f182f27'
     TWILIO_AUTH_TOKEN = '7a474c787f36db39c3c08edce40598a2'
     client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) 
- 
+    print "sending"
     client.messages.create( 
-        from_="+17328100314", 
+        from_="+17328100314",   
         to_=phone_number_target,
-        body_=text,  
+        body_=text,
     )
-
-    django_twilio.views.message(request, text, phone_number_target, '+17328100314', None, None, None, '/message/completed/')
+        
+    #django_twilio.views.message(request, text, phone_number_incoming, '+17328100314', None, None, None, '/message/completed/')
 
 
     

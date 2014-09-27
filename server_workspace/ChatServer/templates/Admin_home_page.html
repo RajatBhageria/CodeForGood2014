@@ -40,7 +40,9 @@
               			<td>{{ pair.mentor_name }}</td>
               			<td>{{ pair.mentee_name }}</td>
               			<td>{{ pair.freq }}</td>
-              			<td><a href="{% url 'admin_history' %}?pair_id={{ pair.id }}">View</a></td>
+              			<!--  <td><a href="{% url 'admin_history' %}?pair_id={{ pair.id }}">View</a></td>-->
+              			<td><a href="{% url 'admin_pair_profile' %}?pair_id={{ pair.id }}">View</a></td>
+              			
               		</tr>
               	{% endfor %}         
               </tbody>

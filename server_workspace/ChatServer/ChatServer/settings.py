@@ -28,7 +28,7 @@ ALLOWED_HOSTS = []
 
 from os.path import join
 
-TEMPLATE_DIRS = BASE_DIR + "/templates/"
+TEMPLATE_DIRS = (os.path.join(BASE_DIR + "/templates/"),)
 
 STATICFILES_DIRS = (
                     os.path.join(BASE_DIR, "static"),)
@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mentor',
         'USER': 'root',
-        'PASSWORD': 'mag1c',#code4good
+        'PASSWORD': 'code4good',#code4good
         'HOST': '',
         'PORT': '',
     }
