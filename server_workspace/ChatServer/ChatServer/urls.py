@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     url(r'^loginRequest/$',views.login_request, name='login_request'),
     url(r'^login/$', views.login_page),
     url(r'^mentorView/$', views.mentor_view),
+    url(r'^adminPairProfile/badges.html$', views.view_badges, name='view_badges'),
+    url(r'^adminPairProfile/analytics.html$', views.view_analytics, name='analytics'),
 
     #url(r'^message/$', 'django_twilio.views.message', {
      #   'message': 'Thanks for the SMS. Talk to you soon!',

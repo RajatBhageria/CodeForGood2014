@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Badges</title>
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/badges.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Search" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+								</li>
+								<li>
+									<a class="gn-icon gn-icon-download">History</a>
+								</li>
+								<li><a class="gn-icon gn-icon-cog">Badge</a></li>
+								<li>
+									<a class="gn-icon gn-icon-archive">Analytics</a>
+									
+								<li><a class="gn-icon gn-icon-article">Send Message</a></li>
+									
+								</li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				 <div class="search">
+
+				 </div>
+				
+			</ul>
+			<header>
+				<h1>iMentor Web Application Badges <span> <a href="http://www.imentor.org/mission-and-work">iMentor website</a> page</span>
+				
+				<div class="row">
+
+				<div class="col-md-4">
+					<a href="#"> <center><img src="image/gamg4.png" alt="Flag" height="100" width="100" ></center></a>
+					<center><h4>Shared a personal story</h4></center>
+				</div>
+
+				<div class="col-md-4">
+					
+					<a href="#">  <center><img src="image/Badge-icon.png" alt="Flag" height="100" width="100"></center></a>
+					<center><h4>Made a break-through</h4></center>
+				</div>
+
+				<div class="col-md-4">
+					<a href="#">  <center><img src="image/badge.png" alt="Flag" height="100" width="100"></center></a>
+					<center><h4>Did well academically</h4></center>
+				</div>
+
+			</div>
+			<br></br>
+
+			<div class="row">
+
+				<div class="col-md-4">
+					<a href="#">  <center><img src="image/game2.png" alt="Flag" height="100" width="150" ></center></a>
+					<center><h4>Made progress in work place</h4></center>
+					
+				</div>
+
+				<div class="col-md-4">
+					
+					<a href="#">  <center><img src="image/game5.png" alt="Flag" height="100" width="100"></a></center>
+					<center><h4>Genuine courage</h4></center>
+				</div>
+
+				<div class="col-md-4">
+					<a href="#"> <center> <img src="image/game1.png" alt="Flag" height="100" width="100"></center></a>
+					<center><h4>Demonstrated trust</h4></center>
+				</div>
+
+			</div>
+				
+			</h1>
+				<ul id="nav">
+
+    <li>
+
+						<div class ="textBox">
+						  
+		</header> 
+		</div><!-- /container -->
+
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+
+			</div>
+	
+			</header> 
+		</div><!-- /container -->
+
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	</body>
+</html>

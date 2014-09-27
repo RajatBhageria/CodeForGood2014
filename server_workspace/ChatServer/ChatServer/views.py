@@ -45,6 +45,10 @@ def login_page(request):
 def mentor_view(request):
     print "getting page"
     return render(request, "Mentor_View.html")
+def view_badges(request):
+    return render(request, "badges.html")
+def view_analytics(request):
+    return render(request, "analytics.html")
 
 def login_request(request):
     print "entering login request"
