@@ -4,7 +4,7 @@ Created on Sep 26, 2014
 @author: Matthew
 '''
 from django.views.generic import TemplateView
-
+from twilio.rest import TwilioRestClient 
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -13,7 +13,7 @@ from django.http import HttpResponse
 
 from django.forms.formsets import formset_factory
 import models
-
+import django_twilio
 
 def test_page(request):
     user = models.User(first_name="matt",last_name="maclean")
@@ -21,10 +21,37 @@ def test_page(request):
     return render(request, 'test.html')
 
 def route_message(request):
-    phone_number = request.GET.get('From')
-    print "new"
-    print phone_number
-    return HttpResponse('<Response><Message>Hello from your Django app!</Message></Response>')
+    phone_number_incoming = request.GET.get('From')
+    text = request.GET.get('Body')
+    print phone_number_incoming
+    user = models.User.objects.get(phone_number=phone_number_incoming)
+    pair_cand_1 = models.Pair.objects.filter(mentor_id=user.id)
+    pair_cand_2 = models.Pair.objects.filter(mentee_id=user.id)
+    if pair_cand_1:
+        mentee = models.User.objects.get(id=pair_cand_1[0].mentee_id)
+        phone_number_target = mentee.phone_number
+    else:
+        mentor = models.User.objects.get(id=pair_cand_2[0].mentor_id)
+        phone_number_target = mentor.phone_number
+    print phone_number_target
+    
+    TWILIO_ACCOUNT_SID = 'ACa3784f71861749cee6445c4d2f182f27'
+    TWILIO_AUTH_TOKEN = '7a474c787f36db39c3c08edce40598a2'
+    client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) 
+ 
+    client.messages.create( 
+        from_="+17328100314", 
+        to_=phone_number_target,
+        body_=text,  
+    )
+
+    django_twilio.views.message(request, text, phone_number_target, '+17328100314', None, None, None, '/message/completed/')
+
+
+    
+
+    
+
 
 def initialize_data(request):
     # Create mentor and mentee
