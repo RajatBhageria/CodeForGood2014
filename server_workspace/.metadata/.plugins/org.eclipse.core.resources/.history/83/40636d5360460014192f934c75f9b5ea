@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<title>Badges</title>
 		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/badges.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/badges.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/component.css" />
+		<link rel="stylesheet" href="../static/bootstrap.css">
 		<script src="js/modernizr.custom.js"></script>
 	</head>
-	<body>
+	<body> <!-- create a dropdown from left -->
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main">
 				<li class="gn-trigger">
@@ -48,19 +48,29 @@
 				
 				<div class="row">
 
+<<<<<<< HEAD
 				<div class="col-md-4">
+					<a href="#"> <center><img src="../static/image/gamg4.png" alt="Flag" height="100" width="100" ></center></a>
+=======
+				<div class="col-md-4"> <!-- loarding badges -->
 					<a href="#"> <center><img src="image/gamg4.png" alt="Flag" height="100" width="100" ></center></a>
+>>>>>>> 3e03c9700afce47d91543fa9bd48d66189c0fa31
 					<center><h4>Shared a personal story</h4></center>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4"><!-- loarding badges -->
 					
-					<a href="#">  <center><img src="image/Badge-icon.png" alt="Flag" height="100" width="100"></center></a>
+					<a href="#">  <center><img src="../static/image/Badge-icon.png" alt="Flag" height="100" width="100"></center></a>
 					<center><h4>Made a break-through</h4></center>
 				</div>
 
+<<<<<<< HEAD
 				<div class="col-md-4">
+					<a href="#">  <center><img src="../static/image/badge.png" alt="Flag" height="100" width="100"></center></a>
+=======
+				<div class="col-md-4"><!-- loarding badges -->
 					<a href="#">  <center><img src="image/badge.png" alt="Flag" height="100" width="100"></center></a>
+>>>>>>> 3e03c9700afce47d91543fa9bd48d66189c0fa31
 					<center><h4>Did well academically</h4></center>
 				</div>
 
@@ -69,20 +79,30 @@
 
 			<div class="row">
 
+<<<<<<< HEAD
 				<div class="col-md-4">
+					<a href="#">  <center><img src="../static/image/game2.png" alt="Flag" height="100" width="150" ></center></a>
+=======
+				<div class="col-md-4"><!-- loarding badges -->
 					<a href="#">  <center><img src="image/game2.png" alt="Flag" height="100" width="150" ></center></a>
+>>>>>>> 3e03c9700afce47d91543fa9bd48d66189c0fa31
 					<center><h4>Made progress in work place</h4></center>
 					
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4"><!-- loarding badges -->
 					
-					<a href="#">  <center><img src="image/game5.png" alt="Flag" height="100" width="100"></a></center>
+					<a href="#">  <center><img src="../static/image/game5.png" alt="Flag" height="100" width="100"></a></center>
 					<center><h4>Genuine courage</h4></center>
 				</div>
 
+<<<<<<< HEAD
 				<div class="col-md-4">
+					<a href="#"> <center> <img src="../static/image/game1.png" alt="Flag" height="100" width="100"></center></a>
+=======
+				<div class="col-md-4"><!-- loarding badges -->
 					<a href="#"> <center> <img src="image/game1.png" alt="Flag" height="100" width="100"></center></a>
+>>>>>>> 3e03c9700afce47d91543fa9bd48d66189c0fa31
 					<center><h4>Demonstrated trust</h4></center>
 				</div>
 
@@ -109,8 +129,8 @@
 			</header> 
 		</div><!-- /container -->
 
-		<script src="js/classie.js"></script>
-		<script src="js/gnmenu.js"></script>
+		<script src="../static/js/classie.js"></script>
+		<script src="../static/js/gnmenu.js"></script>
 		<script>
 			new gnMenu( document.getElementById( 'gn-menu' ) );
 		</script>
