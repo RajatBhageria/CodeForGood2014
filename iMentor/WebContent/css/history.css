@@ -1,5 +1,5 @@
 .nav {
-  background-color: #b3e5fc;
+  background-color: #ffffff;
 }
 
 .nav a {
@@ -17,7 +17,6 @@
 
 .neighborhood-guides{
   background-color: #efefef;
-  border-bottom: 1px solid #dbdbdb;
 }
 
 .neighborhood-guides h2{
@@ -28,12 +27,12 @@
 
 .neighborhood-guides p{
     font-size: 15px;
-    margin-bottom: 13px;
+    
 }
 
 
 .jumbotron {
-  background-image:url('http://goo.gl/04j7Nn');
+  background-color: #eeeeee;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,7 +40,7 @@
 
 .jumbotron .container {
   position: relative;
-  top:100px;
+  top:90px;
 }
 
 .jumbotron h1 {
