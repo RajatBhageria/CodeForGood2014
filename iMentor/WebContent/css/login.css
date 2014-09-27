@@ -1,8 +1,8 @@
 .nav a {
   color: #5a5a5a;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
-  padding: 14px 10px;
+  padding: 15px 15px;
   text-transform: uppercase;
 }
 
@@ -11,8 +11,8 @@
 }
 
 .jumbotron {
-  background-image:src("image/Feedback-icon.png");
-  height: 500px;
+  background-image:url('http://i1368.photobucket.com/albums/ag194/cai2053/login_zpsd6d7501d.jpg');
+  
   background-repeat: no-repeat;
   background-size: cover;
 }
